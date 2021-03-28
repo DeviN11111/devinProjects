@@ -18,6 +18,7 @@ nav{
 }
 .subMenu{
 	opacity: 0;
+	visibility: hidden;
 	position: absolute;
 	background-color: #404040;
 	border-radius: 10px;
@@ -59,6 +60,7 @@ a:hover {
 }
 
 .liProjecten:hover .subMenu{
+	visibility: visible;
 	opacity: 1;
 }
 .liProjecten {
