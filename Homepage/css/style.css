@@ -17,7 +17,6 @@ nav{
 	list-style-type: none;
 }
 .subMenu{
-	visibility: hidden;
 	opacity: 0;
 	position: absolute;
 	background-color: #404040;
@@ -60,7 +59,6 @@ a:hover {
 }
 
 .liProjecten:hover .subMenu{
-	visibility: visible;
 	opacity: 1;
 }
 .liProjecten {
@@ -69,7 +67,7 @@ a:hover {
 .projecten i{
 	margin-left: 10px;
 }
-.test{
+.content{
 	grid-column: 1/2;
 	grid-row: 2/3;
 	background-color: lightgray;
@@ -93,15 +91,12 @@ a:hover {
 	color: white;
 	background-color: #006680;
 }
-
 #webName{
 	border-radius: 50px 0px 0px 50px;
 	background-color: #006680;
 	font-weight: bold;
 	width: 200px;
-
 }
-
 .homeSide{
 	margin-left: 10px;
 }
@@ -171,4 +166,5 @@ a:hover {
 #score{
 	float: right;
 }
+
 
