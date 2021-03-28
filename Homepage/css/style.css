@@ -64,7 +64,11 @@ a:hover {
 
 }
 
-.liProjecten:hover .subMenu, .VIES{
+.liProjecten:hover .subMenu{
+	opacity: 1;
+	visibility: visible;
+}
+.liProjecten:hover .VIES{
 	opacity: 1;
 	visibility: visible;
 }
