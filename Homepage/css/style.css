@@ -1,0 +1,174 @@
+.container{
+	display: grid;
+	grid-template-columns: 1000px;
+	grid-template-rows: 60px 850px;
+	width: 1000px;
+	margin:0 auto;
+
+}
+nav{
+	background-color:#404040;
+	border-radius: 50px;
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	list-style-type: none;
+}
+.subMenu{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	background-color: #404040;
+	border-radius: 10px;
+	width: 150px;
+	transition: all .2s ease-in-out;
+
+}
+.firstUL > li{
+	display: inline-block;
+	margin-right: 40px;
+	height: 60px;
+	width: 150px;
+}
+
+a{
+	color: white;
+	line-height: 60px;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+	border-radius: 10px;
+	transition: ease 0.2s;
+}
+
+i{
+	margin-right: 10px;
+}
+
+a:hover {
+	background-color: #00b18a;
+	color: #404040;
+}
+.liProjecten:hover .projecten{
+	background-color: #00b18a;
+	color: #404040;
+
+}
+
+.liProjecten:hover .subMenu{
+	visibility: visible;
+	opacity: 1;
+}
+.liProjecten {
+	margin-bottom: 20px;
+}
+.projecten i{
+	margin-left: 10px;
+}
+.test{
+	grid-column: 1/2;
+	grid-row: 2/3;
+	background-color: lightgray;
+	border-radius: 50px;
+	margin-top: 20px;
+}
+.VIES{
+	height: 10px;
+}
+
+.listSpace{
+	margin-bottom: 5px;
+}
+
+.subMenu a:hover{
+	background-color: #8c8c8c;
+}
+
+#webName:hover{
+	border-radius: 50px 0px 0px 50px;
+	color: white;
+	background-color: #006680;
+}
+
+#webName{
+	border-radius: 50px 0px 0px 50px;
+	background-color: #006680;
+	font-weight: bold;
+	width: 200px;
+
+}
+
+.homeSide{
+	margin-left: 10px;
+}
+#playButton, #resetButton{
+	width: 100%;
+	height: 50%;
+	font-size: 20px;
+	font-family: sans-serif;
+	border-radius: 20px;
+	border: #666666 solid 5px;
+	outline: none;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	background-color: darkgray;
+	border-radius: 15px;
+	transition: ease-in-out 0.1s;
+}
+
+.cpsTester{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}				
+
+#playButton:active{
+	transform: translateY(4px);
+	margin-top: 1px;
+	box-shadow: 3px 3px darkgray;
+	border: solid #4c4c4c 8px;
+}
+
+
+#timer, #cps, #score{
+	text-align: center;
+	font-size: 30px;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin: 15px 0px;
+}
+
+#cps{
+	border-radius: 10px;
+	color: #4d0000;
+	border: solid #4d0000 5px;
+	padding: 10px 0;
+	display: none;
+
+}
+
+#resetButton{
+	background-color: #660000;
+	width: 30%;
+	height: 10%;
+	border: solid #4d0000 5px;
+	display: none;
+	margin-top: 10px;
+}
+
+.inlineBlock{
+	display: inline-block;
+}
+
+#score{
+	float: right;
+}
+
