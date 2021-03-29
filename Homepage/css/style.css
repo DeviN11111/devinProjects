@@ -1,7 +1,7 @@
 .container{
 	display: grid;
 	grid-template-columns: 1000px;
-	grid-template-rows: 60px 850px;
+	grid-template-rows: 60px 850px 60px;
 	width: 1000px;
 	margin:0 auto;
 
@@ -75,6 +75,7 @@ a:hover {
 	margin-left: 10px;
 }
 .content{
+	position: relative;
 	grid-column: 1/2;
 	grid-row: 2/3;
 	background-color: lightgray;
@@ -177,5 +178,59 @@ a:hover {
 	float: right;
 }
 
+.image{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 500px;
+	height: 415px;
+	border-radius: 50px 0px 0px 0px;
+}
 
+.image2{
+	position: absolute;
+	width: 500px;
+	height: 415px;
+	border-radius: 0px 0px 50px 0px;
+	right: 0;
+	bottom: 0;
+}
 
+.text1{
+	position: absolute;
+	right: 0;
+	top: 50px;
+	margin-right: 40px;
+	width: 400px;
+	text-align: center;
+}
+
+.text2{
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	margin-left: 40px;
+	width: 400px;
+}
+
+footer{
+	font-size: 14px;
+	margin: auto;
+	grid-column: 1/2;
+	grid-row: 3/4;
+	margin-right: 20px;
+	height: 30px;
+	width: 1000px;
+	background-color: #404040;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+}
+
+.image2{
+	background-color: blue;
+}
