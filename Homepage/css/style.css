@@ -27,11 +27,31 @@ nav{
 	background-color: #404040;
 	border-radius: 10px;
 	width: 150px;
-	transition: all .2s ease-in-out;
+	transition: .2s ease-in-out;
 	z-index: 1;
-
 }
-
+.valSubMenu{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	background-color: #404040;
+	border-radius: 10px;
+	width: 150px;
+	transition: .2s ease-in-out;
+	z-index: 1;
+	display: inline-block;
+}
+.liValorant:hover .valSubMenu {
+	visibility: visible;
+	opacity: 1;
+}
+.liValorant .fa-sort-down{
+	transition: ease 0.1s;
+	margin-left: 3px;
+}
+.liValorant:hover .fa-sort-down{
+	transform: rotate(-90deg);
+}
 .firstUL > li:nth-of-type(1){
 	margin-right: 120px;
 }
@@ -54,13 +74,13 @@ a{
 	transition: ease 0.2s;
 }
 
-i{
-	margin-right: 10px;
-}
-
 a:hover {
 	background-color: #00b18a;
 	color: #404040;
+}
+
+i{
+	margin-right: 10px;
 }
 .liProjecten:hover .projecten{
 	background-color: #00b18a;
@@ -106,7 +126,6 @@ a:hover {
 .subMenu a:hover{
 	background-color: #8c8c8c;
 }
-
 #webName:hover{
 	border-radius: 50px 0px 0px 50px;
 	color: white;
@@ -280,9 +299,10 @@ body{
 #s10Button{
 	border: solid #99ff99 5px;
 }
+/* -----------------------------HIER BEGINT DE TEAM MAKER CSS--------------------------- /*
 
 
-/* HIER BEGINT DE TEAM MAKER CSS: /*
+
 
 
 
