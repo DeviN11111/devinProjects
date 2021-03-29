@@ -4,7 +4,7 @@
 	grid-template-rows: 60px 850px 60px;
 	width: 1000px;
 	margin:0 auto;
-
+	height: 100vh !important;
 }
 nav{
 	background-color:#404040;
@@ -77,6 +77,10 @@ a:hover {
 }
 .projecten i{
 	margin-left: 10px;
+}
+
+.projecten{
+	cursor: default;
 }
 .content{
 	position: relative;
@@ -154,6 +158,10 @@ a:hover {
 	font-family: sans-serif;
 	font-weight: bold;
 	margin: 15px 0px;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
 
 #cps{
@@ -207,17 +215,20 @@ a:hover {
 	margin-right: 40px;
 	width: 400px;
 	text-align: center;
+	font-size: 18px;
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 .text2{
 	text-align: center;
-	color: white;
-	font-size: 16px;
+	color: #006680;
+	font-size: 18px;
 	position: absolute;
 	left: 0;
 	bottom: 50px;
 	margin-left: 40px;
 	width: 400px;
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 footer{
@@ -237,4 +248,35 @@ footer{
 
 .image2{
 	background-color: blue;
+}
+
+body{
+	background-color: #f5f5f5;
+}
+
+.timeButtons{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.timeButtons h1{
+	line-height: 80px;
+}
+.timeButtons button{
+	background-color: #4c4c4c;
+	border: #666666 solid 5px;
+	margin: 40px;
+	border-radius: 50px;
+	outline: none;
+	width: 80px;
+	height: 80px;
+	font-weight: bold;
+	font-size: 19px;
+	color: white;
+}
+
+
+#s10Button{
+	border: solid #99ff99 5px;
 }
