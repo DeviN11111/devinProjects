@@ -35,7 +35,7 @@ function runtimer (){
 	if (remainingTimeSEC==-1){
 		clearInterval(startTimer)
 		playButton.disabled = true;
-		cps.innerHTML = "You clicked " + (score / (amountOfSeconds + 1)) +  " CPS";
+		cps.innerHTML = "You clicked " + Math.round((score / (amountOfSeconds + 1)) * 100) / 100 +  " CPS";
 		resetButton.style.display = 'block'  
 		cpsResult.style.display = 'block'
 		s5Button.disabled = false;
@@ -79,3 +79,4 @@ s30Button.onclick = function(){
 	s30Button.style.border = 'solid #99ff99 5px'
 	s5Button.style.border = 'solid #666666 5px'
 }
+
