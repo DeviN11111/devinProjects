@@ -11,7 +11,7 @@ submit.onclick = function(){
 
 	if(checkInput()){
 		createElem()
-		createTeamsMethod2()
+		createTeamsMethod1()
 
 
 	}
@@ -61,12 +61,29 @@ function createTeamsMethod1(){
 	}
 }
 function createTeamsMethod2(){
-	// maakt team 1
-	// names = [ "Devin", "Nick", "Koes", "Levi", "Kood", "kaser"]
-	var staticLength = names.length/2;
-	for (i=0; i<staticLength; i++) {
-		document.getElementById('team1persoon'+(i+1)).innerHTML = names[0]
-		names.splice(0, 1);
-		names.reverse();
+	if ((names.length/2)%2 == 0) {
+		var persoonIdTeam1 =0;
+		var persoonIdTeam2=0;
+		var wissel = true;
+		var lastPerson = names.length-1;
+		for(i=0; i<(names.length / 2); i++){
+			if(wissel == true){
+				persoonIdTeam1 = persoonIdTeam1 + 1
+				document.getElementById('team1persoon'+(persoonIdTeam1)).innerHTML = names[i]
+				persoonIdTeam1 = persoonIdTeam1 + 1
+				document.getElementById('team1persoon'+(persoonIdTeam1)).innerHTML = names[lastPerson]
+				wissel = false
+			}
+			else {
+				persoonIdTeam2 = persoonIdTeam2 + 1
+				document.getElementById('team2persoon'+(persoonIdTeam2)).innerHTML = names[i]
+				persoonIdTeam2 = persoonIdTeam2 + 1
+				document.getElementById('team2persoon'+(persoonIdTeam2)).innerHTML = names[lastPerson]
+				wissel = true;
+			}
+			lastPerson--
+		}
 	}
+	
+
 }
