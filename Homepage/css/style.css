@@ -302,14 +302,18 @@ body{
 /* -----------------------------HIER BEGINT DE TEAM MAKER CSS---------------------------*/
 
 .teammakerContent .input1{
-	transform: translate(-50%);
+	/*transform: translate(-50%);
 	position: absolute;
 	top: 100px;
-	left: 50%;
+	left: 50%;*/
 	width: 300px;
-	height: 300px;
+	height: 309px;
 	outline: none;
 	resize: none;
+	float: left;
+	padding: 10px;
+	border-radius: 20px;
+
 	
 }
 
@@ -325,7 +329,7 @@ body{
 	color: white;
 	left: 50%;
 	transform: translate(-50%);
-	top: 450px;
+	top: 480px;
 }
 
 .teammakerContent h1{
@@ -333,7 +337,7 @@ body{
 	text-align: center;
 }
 
-.teammakerContent div {
+.teammakerContent #teamArea div {
 	position: absolute;
 	border: solid red 1px;
     top: 525px;
@@ -344,16 +348,96 @@ body{
     padding: 20px;
     border: solid #666666 5px;
     color: #404040;
+    width: 150px;
+    overflow: hidden;
+
 }
 
-.teammakerContent div:nth-of-type(1){
-	left: 200px;
+
+.teammakerContent #teamArea div:nth-of-type(1){
+	left: 100px;
 	
 }
-.teammakerContent div:nth-of-type(2){
-	right: 200px;
+.teammakerContent #teamArea div:nth-of-type(2){
+	right: 100px;
 }
 
 .teammakerContent h2{
 	margin-bottom: 30px;
+}
+#teamArea{
+	display: none;
+}
+
+.settings{
+	width: 160px;
+	border: solid 5px #404040;
+	padding: 16px;
+	border-radius: 20px;
+	background-color: darkgray;
+	color: #333333;
+	float: right;
+}
+.settings h2 {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.settings h3 {
+	border-bottom: 5px solid #404040;
+	padding-bottom: 6px;
+	margin-bottom: 16px;
+	text-align: center;
+	width: 100%;
+}
+.settings .buttonContainer {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.settings button{
+	background-color: #4c4c4c;
+	border: #666666 solid 5px;
+	border-radius: 50px;
+	outline: none;
+	width: 40px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 19px;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+}
+.settings p {
+	display: inline-block;
+	font-size: 21px;
+	height: 40px;
+	line-height: 40px;
+}
+.centerContent {
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	transform: translate(-50%);
+	width: 550px;
+}
+.centerContent * {
+	display: inline-block;
+}
+#errorMsg {
+	display: none;
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 20px;
+	font-size: 26px;
+	border: solid #660000 5px;
+	border-radius: 20px;
+	color: #660000;
+	font-weight: bold;
+	text-align: center;
+	z-index: 2;
+	background-color: lightgray;
 }
