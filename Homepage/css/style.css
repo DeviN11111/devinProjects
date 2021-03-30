@@ -333,7 +333,7 @@ body{
 	text-align: center;
 }
 
-.teammakerContent div{
+.teammakerContent div {
 	position: absolute;
 	border: solid red 1px;
     top: 525px;
@@ -344,7 +344,6 @@ body{
     padding: 20px;
     border: solid #666666 5px;
     color: #404040;
-
 }
 
 .teammakerContent div:nth-of-type(1){
