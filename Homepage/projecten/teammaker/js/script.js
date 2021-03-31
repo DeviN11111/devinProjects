@@ -151,14 +151,21 @@ function createTeamsAlt(){
 		}
 	}
 }
-
-function createTeamsRand(){
-	for (i=0; i<(names.length/2); i++) {
-		var randomNumber = Math.ceil(Math.random() * 2);
-		document.getElementById("team1persoon"+randomNumber).innerHTML = names[i];
-	}
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
 }
-
+function createTeamsRand(){
+		shuffle(names);
+		var count = 0;
+	for (i=0; i<(names.length/2); i++) {
+			document.getElementById('team1persoon'+(i+1)).innerHTML = names[count]
+			count++
+		}
+	for (i=0; i<(names.length/2); i++) {		
+			document.getElementById('team2persoon'+(i+1)).innerHTML = names[count]
+			count++	
+	}	
+}
 //////////////////////////////////////////////////////////
 
 // onclicks on buttons in settings ////////////////////////
