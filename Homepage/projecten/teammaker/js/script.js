@@ -29,7 +29,6 @@ submit.onclick = function(){
 		}
 	}
 	else {
-		////// WARNING MSG
 		console.log("I found cheese")
 	}
 }
@@ -53,7 +52,7 @@ function checkInput(){
 		errorMsg.innerHTML = "Je mag maar maximaal 10 spelers toevoegen"
 		allowed = false;
 	}
-	if(names.length == 2){
+	if(names.length < 4){
 		errorMsg.style.display = 'block'
 		errorMsg.innerHTML = "Je moet minimaal 4 spelers toevoegen"
 		allowed = false;
