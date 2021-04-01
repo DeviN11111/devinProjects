@@ -8,18 +8,30 @@ var amountOfSeconds = 29;
 var remainingTimeSEC = amountOfSeconds;
 var remainingTimeMS = 9;
 var startTimer;
-var score=0;
+var hits= 0;
 var stopTimer;
-
+var misses= -1;
+var hits;
+var fullAccuracy = 0;
+///////// MISS APARTE FUNCTIE ACCURACY \/
 aimTrainerContent.onclick = function(){
-	
+	misses++       ///DIT IS JE MISSES
+	fullAccuracy = (hits / misses* 100)
+	if (fullAccuracy >= 100){
+		fullAccuracy = 100
+		AimTrainerAcc.innerHTML = "Accuracy: 100%"
+	}
+	AimTrainerAcc.innerHTML = "Accuracy: " + Math.round(fullAccuracy) + "%"
+	if(misses == 0){
+		AimTrainerAcc.innerHTML = "Accuracy: 100%"
+	}
 }
 aimTrainerStart.onclick = function(){
 	divTarget.style.left = Math.floor(Math.random() * 100)+"%"
 	divTarget.style.top = Math.floor(Math.random() * 100)+"%"
 	aimTrainerStart.style.display = 'none'
 	divTarget.style.display = 'block'
-	AimTrainerScore.innerHTML = 'Score: 0'
+	AimTrainerScore.innerHTML = 'Hits: 0'
 	stopTimer = setInterval(runtimer, 100)
 }
 
@@ -28,8 +40,8 @@ divTarget.onclick = function(){
 	var randomY = Math.floor(Math.random() * 100)
 	divTarget.style.left = (randomX+"%")
 	divTarget.style.top = (randomY+"%")
-	score++
-	AimTrainerScore.innerHTML = "Score:" + score
+	hits++
+	AimTrainerScore.innerHTML = "Hits: " + hits
 }
 
 function runtimer (){
@@ -43,8 +55,7 @@ function runtimer (){
 		AimTrainerTime.innerHTML = "Time: 0"
 		clearInterval(stopTimer)
 		gameOver()
-	}
-		
+	}		
 }
 
 function gameOver(){
@@ -52,5 +63,5 @@ function gameOver(){
 	divTarget.style.display = 'none'
 	amountOfSeconds = 29;
 	remainingTimeSEC = amountOfSeconds;
-	score= 0;
+	hits= 0;
 }
